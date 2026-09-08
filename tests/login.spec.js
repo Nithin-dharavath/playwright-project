@@ -1,9 +1,9 @@
 import {test, expect} from "@playwright/test";
 
-const url = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+const website_url = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
 
 test("login testing", async ({page}) => {
-    await page.goto(url);
+    await page.goto(website_url);
     console.log(await page.title());
     await page.getByPlaceholder("Username").fill("Admin");
     await page.getByPlaceholder("Password").fill("admin123")
@@ -12,7 +12,7 @@ test("login testing", async ({page}) => {
 })
 
 test("logout testing", async ({page}) => {
-    await page.goto(url);
+    await page.goto(website_url);
     await page.getByPlaceholder("Username").fill("Admin");
     await page.getByPlaceholder("Password").fill("admin123");
     await page.getByRole("button", {name:"Login"}).click();
