@@ -43,10 +43,10 @@ const chromiumExecutablePath = pickExecutable([
   browserPath('chromium-1234', 'chrome-win64', 'chrome.exe'),
 ]);
 
-const webkitExecutablePath = pickExecutable([
-  browserPath('webkit-2359', 'Playwright.exe'),
-  browserPath('webkit-2336', 'Playwright.exe'),
-]);
+// const webkitExecutablePath = pickExecutable([
+//   browserPath('webkit-2359', 'Playwright.exe'),
+//   browserPath('webkit-2336', 'Playwright.exe'),
+// ]);
 
 /**
  * Read environment variables from file.
@@ -87,10 +87,10 @@ export default defineConfig({
       use: withExecutablePath({ ...devices['Desktop Chrome'] }, chromiumExecutablePath),
     },
 
-    {
-      name: 'webkit',
-      use: withExecutablePath({ ...devices['Desktop Safari'] }, webkitExecutablePath),
-    },
+    // {
+    //   name: 'webkit',
+    //   use: withExecutablePath({ ...devices['Desktop Safari'] }, webkitExecutablePath),
+    // },
 
     /* Test against mobile viewports. */
     // {
