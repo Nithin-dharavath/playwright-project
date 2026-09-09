@@ -2,6 +2,9 @@ import {test, expect} from "@playwright/test";
 
 const website_url = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
 
+test.use({viewport:{width:1400, height:900}});
+
+
 test("login testing", async ({page}) => {
     await page.goto(website_url);
     console.log(await page.title());
