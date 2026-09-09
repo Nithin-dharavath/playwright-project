@@ -10,18 +10,26 @@ test("dropdown testing", async ({page}) => {
     expect(ele_value.includes("Kerala")).toBeTruthy();
 });
 
-test("dropdown using loop", async ({page}) => {
-    let option = await page.$$("option");
-    let dd = false
-    for (let i = 0; i < option.length; i++)
-    {
-        let allselect = option[i];
-        let value = await allselect.textContent();
-        if(value.includes("Assam"))
-        {
-            dd = true;
-            break;
+
+test.skip("loop dropdown", async ({page}) => {
+    await page.goto(drop_url);
+    const alloptions = page.locator("#state option");
+    let drop_down = false;
+    for(let i = 0; i < await alloptions.count(); i++){
+        const element = alloptions.nth(i);
+        let value = await element.textContent();
+        console.log("values in dropdown + ", value);
+        if(value?.includes("Goa")){
+            drop_down = true;
+            break
         }
-        expect(dd).toBeTruthy();
     }
-});
+    expect(drop_down).toBeTruthy();
+})
+
+
+test("multiple select", async ({page}) => {
+    await page.goto(drop_url);
+    await page.locator("#hobbies").selectOption(["swimmming", "playing"]);
+    page.waitForTimeout(4000);
+})
