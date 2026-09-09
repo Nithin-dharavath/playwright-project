@@ -32,7 +32,7 @@ export default defineConfig({
      * Show the browser while we are debugging.
      * Later you can remove this or set it to true/false as needed.
      */
-    headless: false,
+    headless: true,
 
     /*
      * Record a video for every test

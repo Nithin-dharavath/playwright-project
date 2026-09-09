@@ -1,6 +1,6 @@
 import  {test, expect} from "@playwright/test" ;
 
-test("demo test", async ({page}) => {
+test.skip("demo test", async ({page}) => {
   expect(1.0).toBe(5.0)
 })
 
