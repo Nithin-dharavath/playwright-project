@@ -34,6 +34,8 @@ export default defineConfig({
      */
     headless: true,
 
+    baseURL:"https://freelance-learn-automation.vercel.app/login",
+
     /*
      * Record a video for every test
      */
