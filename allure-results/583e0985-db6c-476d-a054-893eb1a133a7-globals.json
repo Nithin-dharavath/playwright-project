@@ -1,1 +1,0 @@
-{"attachments":[],"errors":[{"message":"test for prompt failed: Test timeout of 30000ms exceeded while running \"afterEach\" hook.","trace":"Test timeout of 30000ms exceeded while running \"afterEach\" hook.\n    at C:\\Users\\Nitin\\Desktop\\projects\\playwright-project\\tests\\alert.spec.js:33:6","timestamp":1789125306980}]}
