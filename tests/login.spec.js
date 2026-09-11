@@ -1,7 +1,7 @@
 import {test} from "@playwright/test";
 import LoginPage from "../page/login";
 import HomePage from "../page/homepage";
-import testdata from "../test_data.json" with {type: "json"};
+import data from "../sampleData/data.json" with {type: "json"};
 
 test("login appliaction using the POM", async ({page}) => {
 
