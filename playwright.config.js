@@ -22,7 +22,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
 
   // HTML test report
-  reporter: 'html',
+  reporter: [['html'], ["allure-playwright"]],
 
   /*
    * Shared settings for all tests
